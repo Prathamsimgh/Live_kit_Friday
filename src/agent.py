@@ -6,8 +6,12 @@ from livekit.plugins import (
     noise_cancellation,
 )
 from livekit.plugins import google
-from prompt import AGENT_INSTRUCTION, SESSION_INSTRUCTION
-from tools import get_weather, search_web, send_email
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from config.prompt import AGENT_INSTRUCTION, SESSION_INSTRUCTION
+from src.tools import get_weather, search_web, send_email
 load_dotenv()
 
 

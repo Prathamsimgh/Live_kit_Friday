@@ -1,0 +1,18 @@
+# secrets — never commit the filled-in copy
+.env
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# livekit agent logs and recordings
+*.log
+recordings/
+
+# os / editor cruft
+.DS_Store
+.vscode/
+.idea/

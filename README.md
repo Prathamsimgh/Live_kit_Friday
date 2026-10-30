@@ -28,6 +28,16 @@ vision frames are attached as multimodal input alongside the audio stream.
 - [ ] function calling: calendar, music, home automation
 - [ ] mobile client
 
+## prerequisites
+
+- Python 3.11+
+- A LiveKit server (self-hosted or LiveKit Cloud) — the agent connects
+  to a room, it does not host the SFU itself
+- A Gemini API key for speech-to-text, reasoning, and vision
+- Docker, for the containerised agent setup
+
+Copy `.env.example` to `.env` and fill in the keys before running.
+
 ## run it
 
 coming soon — docker-compose setup is being ironed out.

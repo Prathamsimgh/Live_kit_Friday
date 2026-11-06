@@ -38,6 +38,19 @@ vision frames are attached as multimodal input alongside the audio stream.
 
 Copy `.env.example` to `.env` and fill in the keys before running.
 
+## configuration
+
+All settings come from environment variables — copy `.env.example` to
+`.env` and fill them in:
+
+| Variable | What it is |
+| --- | --- |
+| `LIVEKIT_URL` | LiveKit server URL (self-hosted or LiveKit Cloud) |
+| `LIVEKIT_API_KEY` / `LIVEKIT_API_SECRET` | LiveKit credentials for joining rooms |
+| `GEMINI_API_KEY` | Gemini API key for speech-to-text, reasoning, and vision |
+| `ROOM_NAME` | Room the agent joins (default `friday`) |
+| `AGENT_IDENTITY` | Identity the agent uses in the room (default `friday-agent`) |
+
 ## run it
 
 coming soon — docker-compose setup is being ironed out.

@@ -51,6 +51,18 @@ All settings come from environment variables — copy `.env.example` to
 | `ROOM_NAME` | Room the agent joins (default `friday`) |
 | `AGENT_IDENTITY` | Identity the agent uses in the room (default `friday-agent`) |
 
+## troubleshooting
+
+- **agent can't join the room** — the agent connects to a LiveKit server,
+  it does not host one. Check `LIVEKIT_URL` plus `LIVEKIT_API_KEY` /
+  `LIVEKIT_API_SECRET` in `.env`, and that the server is reachable.
+- **agent joins but never replies** — check `GEMINI_API_KEY`; speech-to-text,
+  reasoning and vision all go through Gemini.
+- **agent joins the wrong room, or two agents clash** — check `ROOM_NAME`
+  and `AGENT_IDENTITY` (defaults `friday` / `friday-agent`).
+- **settings seem ignored** — make sure you copied `.env.example` to `.env`
+  and edited the copy; the example file itself is never read.
+
 ## run it
 
 coming soon — docker-compose setup is being ironed out.

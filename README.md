@@ -63,6 +63,18 @@ All settings come from environment variables — copy `.env.example` to
 - **settings seem ignored** — make sure you copied `.env.example` to `.env`
   and edited the copy; the example file itself is never read.
 
+## local development
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+cp .env.example .env   # fill in your keys first
+```
+
+`.env` is git-ignored, so credentials never leave the machine. The agent
+itself runs from this repo once the code lands — until then, getting the
+environment file right is the only setup step.
+
 ## run it
 
 coming soon — docker-compose setup is being ironed out.

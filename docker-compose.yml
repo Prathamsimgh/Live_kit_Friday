@@ -1,0 +1,20 @@
+# Local LiveKit server for development.
+#
+# The agent connects to a LiveKit room — it does not host the SFU itself.
+# This gives you a throwaway server on your own machine so you can test
+# the agent end to end without a LiveKit Cloud account.
+#
+#   docker compose up -d
+#
+# Then point the agent at it with LIVEKIT_URL=ws://localhost:7880 and
+# the dev credentials from .env.example (API key "devkey", secret "secret").
+# Stop it with `docker compose down`.
+
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+    command: --dev

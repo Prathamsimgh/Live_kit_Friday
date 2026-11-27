@@ -77,4 +77,12 @@ environment file right is the only setup step.
 
 ## run it
 
-coming soon — docker-compose setup is being ironed out.
+for local testing, bring up a throwaway LiveKit server first:
+
+```bash
+docker compose up -d
+```
+
+then point the agent at `ws://localhost:7880` with the dev
+credentials from `.env.example`. the containerised agent setup
+itself is still being ironed out.
